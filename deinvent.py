@@ -17,14 +17,14 @@ def cycle_time(q: float, D: float) -> float:
     """
     return q / D
 
-def total_cost(D: float, K: float, eoq: float) -> float:
+def total_cost(D: float, K: float, h: float, eoq: float) -> float:
     """
     The total cost is the cost of ordering plus mantaining
     """
-    return ordering_cost(D, K, eoq) + mantain_cost(D, K)
+    return ordering_cost(D, K, eoq) + mantain_cost(D, h)
 
 def ordering_cost(D: float, K: float, eoq: float) -> float:
     return K * (D / eoq)
 
-def mantain_cost(D: float, K: float):
-    return K * (D/ 2) # because y/2 is the average amount of items
+def mantain_cost(D: float, h: float):
+    return h * (D/ 2) # because y/2 is the average amount of items
