@@ -31,3 +31,9 @@ def mantain_cost(D: float, h: float):
 
 def reorder_point(D: float, L: float, working_days: int) -> int:
     return math.floor(D * (L/working_days))
+
+def l(working_days: int, n: int) -> float:
+    return working_days / n
+
+def n(D: float, eoq: int) -> float:
+    return D / eoq
