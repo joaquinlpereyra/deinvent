@@ -28,3 +28,6 @@ def ordering_cost(D: float, K: float, eoq: float) -> float:
 
 def mantain_cost(D: float, h: float):
     return h * (D/ 2) # because y/2 is the average amount of items
+
+def reorder_point(D: float, L: float, working_days: int) -> int:
+    return math.floor(D * (L/working_days))
